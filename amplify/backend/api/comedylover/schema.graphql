@@ -1,0 +1,134 @@
+type Joke
+  @model
+  @key(
+    name: "queryName"
+    fields: ["queryName", "date"]
+    queryField: "jokesByDate"
+  ) {
+  id: ID!
+  comedian: String
+  jokeSetup: String
+  jokePunchline: String
+  date: AWSDate
+  info: String
+  file: S3Object
+  owner: String
+  visibility: Visibility
+  searchField: String
+  createdAt: String
+  likes: [JokeLike] @connection(name: "JokeLikes", keyField: "jokeId")
+  queryName: String
+  numLikes: Int
+}
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
+  localUri: String
+  visibility: Visibility
+  mimeType: String
+}
+
+type UserJoke @model {
+  id: ID!
+  userId: ID
+  userName: String
+  userEmail: String
+  comedian: String
+  jokeText: String
+  info: String
+  file: S3Object
+  createdAt: String
+}
+
+# input CreateUserJokeInput {
+#   id: ID!
+#   userId: ID
+#   comedian: String
+#   jokeText: String
+#   info: String
+#   createdAt: String
+#   file: S3ObjectInput!
+# }
+
+# input S3ObjectInput {
+#   bucket: String!
+#   region: String!
+#   key: String!
+#   localUri: String
+#   visibility: Visibility
+#   mimeType: String
+# }
+
+type JokeLike @model {
+  id: ID!
+  jokeId: ID
+  joke: Joke @connection(name: "JokeLikes", keyField: "jokeId")
+  userId: ID
+  createdAt: String
+}
+
+input DeleteJokeLikeInput {
+  id: ID
+  jokeId: ID
+}
+
+enum Visibility {
+  public
+  private
+}
+
+type User
+  @model
+  @auth(
+    rules: [
+      {allow: owner, ownerField: "id", operations: [create, update, delete]}
+    ]
+  ) {
+  id: ID!
+  username: String!
+  premium: Premium
+  posts: [Post] @connection
+  createdAt: String
+  updatedAt: String
+}
+
+enum Premium {
+  premium
+  standard
+}
+
+type Post
+  @model
+  @auth(rules: [{allow: owner, operations: [create, update, delete]}]) {
+  id: ID!
+  postTitle: String
+  postContent: String
+  postImage: S3Object
+  votes: Int
+}
+
+type Vote
+  @model
+  @key(
+    name: "byUser"
+    fields: ["createdBy", "createdAt"]
+    queryField: "votesByUser"
+  ) {
+  id: ID!
+  postId: ID!
+  createdBy: ID!
+  createdAt: String!
+  vote: VoteType
+}
+
+input VoteInput {
+  type: VoteType!
+  id: ID!
+}
+
+enum VoteType {
+  up
+  down
+}

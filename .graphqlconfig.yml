@@ -1,0 +1,18 @@
+projects:
+  comedylover:
+    schemaPath: amplify/backend/api/comedylover/build/schema.graphql
+    includes:
+      - src/graphQL/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/API.ts
+        docsFilePath: src/graphQL
+        region: eu-west-1
+        apiId: 'mfsqs6a5ifharpjiacwf2atbey'
+        maxDepth: 2
+extensions:
+  amplify:
+    version: 3

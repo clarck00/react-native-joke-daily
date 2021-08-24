@@ -1,0 +1,65 @@
+{
+  "project_info": {
+    "project_number": "327788132717",
+    "firebase_url": "https://daily-joke-app.firebaseio.com",
+    "project_id": "daily-joke-app",
+    "storage_bucket": "daily-joke-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327788132717:android:79bbd88066ddf2f4",
+        "android_client_info": {
+          "package_name": "com.dailyjokeapp.dailyjoke"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327788132717-fgmpu4arciemikob52c3kqhk8sv0f66h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dailyjokeapp.dailyjoke",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "327788132717-a0nmrv0vuhdptettv34nlbmcmb224ebv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dailyjokeapp.dailyjoke",
+            "certificate_hash": "1e7ffd472b10718b51539a2e937aa8ee84ee29fb"
+          }
+        },
+        {
+          "client_id": "327788132717-escg76mos58f2knik4sqe8eb2t1ot2lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvmW9iqdXWJ4FZ7pGrHXYsTgyS36HLZKw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327788132717-escg76mos58f2knik4sqe8eb2t1ot2lv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "327788132717-5bbh5ftmod23u9c051u5177q269jivsn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.dailyjokeapp.dailyjoke",
+                "app_store_id": "1461744227"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-7544815451272285~2142888049"
+    }
+  ],
+  "configuration_version": "1"
+}

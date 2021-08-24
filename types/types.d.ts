@@ -1,0 +1,12 @@
+declare module 'aws-amplify-react-native';
+declare module 'react-native-parallax-scroll-view';
+declare module 'react-native-autolink';
+declare module 'react-native-offline';
+declare module 'react-native-animated-loader';
+declare module 'react-native-parallax-scrollview';
+declare module 'react-native-deck-swiper';
+declare module 'lodash.flowright';
+declare module 'react-native-aws3';
+declare module 'react-native-shake';
+declare module 'toggle-switch-react-native';
+declare module 'react-native-cached-image'

@@ -1,0 +1,88 @@
+{
+	"providers": {
+		"awscloudformation": {
+			"AuthRoleName": "comedylover-dev-20191002140231-authRole",
+			"UnauthRoleArn": "arn:aws:iam::639564553884:role/comedylover-dev-20191002140231-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::639564553884:role/comedylover-dev-20191002140231-authRole",
+			"Region": "eu-west-1",
+			"DeploymentBucketName": "comedylover-dev-20191002140231-deployment",
+			"UnauthRoleName": "comedylover-dev-20191002140231-unauthRole",
+			"StackName": "comedylover-dev-20191002140231",
+			"StackId": "arn:aws:cloudformation:eu-west-1:639564553884:stack/comedylover-dev-20191002140231/e3c29e80-e514-11e9-9a2f-0a07909a05bc"
+		},
+		"categories": {
+			"auth": {
+				"comedyloverauth": {
+					"hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"2221447054819000\",\"client_secret\":\"8487ea8861aa5a08789b06dea1fefd4c\"},{\"ProviderName\":\"Google\",\"client_id\":\"327788132717-escg76mos58f2knik4sqe8eb2t1ot2lv.apps.googleusercontent.com\",\"client_secret\":\"euvhHi5u2obJIzn8b3VivH0U\"}]",
+					"facebookAppId": "2221447054819000",
+					"googleClientId": "327788132717-escg76mos58f2knik4sqe8eb2t1ot2lv.apps.googleusercontent.com"
+				}
+			}
+		}
+	},
+	"auth": {
+		"comedyloverauth": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"output": {
+				"GoogleWebClient": "327788132717-escg76mos58f2knik4sqe8eb2t1ot2lv.apps.googleusercontent.com",
+				"AppClientSecret": "9k96eu6mc9rfpj98i4acuir29lqqbqgvith08mh689m2u2uqomn",
+				"UserPoolId": "eu-west-1_7Ab9TygEV",
+				"AppClientIDWeb": "2r2n7nct8ab9si42lmr6kce5tt",
+				"AppClientID": "4tikr95ejc128qblslslfj3c61",
+				"HostedUIDomain": "comedylover-dev",
+				"FacebookWebClient": "2221447054819000",
+				"IdentityPoolId": "eu-west-1:e6b83a57-e668-44c0-8a32-4c5176592c47",
+				"IdentityPoolName": "comedyloveridentitypool__dev",
+				"OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"dailyjoke://main/\"],\"LogoutURLs\":[\"dailyjoke://main/\"]}",
+				"UserPoolName": "comedyloveruserpool"
+			},
+			"lastPushTimeStamp": "2019-11-10T22:29:51.346Z",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/comedylover-dev-20191002140231-deployment/amplify-cfn-templates/auth/comedyloverauth-cloudformation-template.yml",
+				"logicalId": "authcomedyloverauth"
+			}
+		}
+	},
+	"api": {
+		"comedylover": {
+			"service": "AppSync",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"authConfig": {
+					"additionalAuthenticationProviders": [],
+					"defaultAuthentication": {
+						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
+						"userPoolConfig": {
+							"userPoolId": "authcomedyloverauth"
+						}
+					}
+				},
+				"GraphQLAPIIdOutput": "mfsqs6a5ifharpjiacwf2atbey",
+				"GraphQLAPIEndpointOutput": "https://yseogg42n5bvbloyjufi75yje4.appsync-api.eu-west-1.amazonaws.com/graphql"
+			},
+			"lastPushTimeStamp": "2019-11-10T22:29:52.087Z",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/comedylover-dev-20191002140231-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+				"logicalId": "apicomedylover"
+			},
+			"lastPushDirHash": "m3E3jEYeRUl7Nqgu/3Aozd89GyU="
+		}
+	},
+	"storage": {
+		"comedyloverimagestorage": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation",
+			"output": {
+				"BucketName": "comedyloverimagebucket-dev",
+				"Region": "eu-west-1"
+			},
+			"lastPushTimeStamp": "2019-11-10T22:29:51.355Z",
+			"providerMetadata": {
+				"s3TemplateURL": "https://s3.amazonaws.com/comedylover-dev-20191002140231-deployment/amplify-cfn-templates/storage/s3-cloudformation-template.json",
+				"logicalId": "storagecomedyloverimagestorage"
+			}
+		}
+	}
+}

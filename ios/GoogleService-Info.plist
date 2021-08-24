@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>327788132717-5bbh5ftmod23u9c051u5177q269jivsn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.327788132717-5bbh5ftmod23u9c051u5177q269jivsn</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>327788132717-a0nmrv0vuhdptettv34nlbmcmb224ebv.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDVJIcTr2DdzrT8Jxa_-5bWOfe6-JAoZl8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>327788132717</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dailyjokeapp.dailyjoke</string>
+	<key>PROJECT_ID</key>
+	<string>daily-joke-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>daily-joke-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:327788132717:ios:79bbd88066ddf2f4</string>
+	<key>DATABASE_URL</key>
+	<string>https://daily-joke-app.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-7544815451272285~7812526436</string>
+</dict>
+</plist>

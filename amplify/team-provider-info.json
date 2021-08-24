@@ -1,0 +1,23 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "comedylover-dev-20191002140231-authRole",
+            "UnauthRoleArn": "arn:aws:iam::639564553884:role/comedylover-dev-20191002140231-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::639564553884:role/comedylover-dev-20191002140231-authRole",
+            "Region": "eu-west-1",
+            "DeploymentBucketName": "comedylover-dev-20191002140231-deployment",
+            "UnauthRoleName": "comedylover-dev-20191002140231-unauthRole",
+            "StackName": "comedylover-dev-20191002140231",
+            "StackId": "arn:aws:cloudformation:eu-west-1:639564553884:stack/comedylover-dev-20191002140231/e3c29e80-e514-11e9-9a2f-0a07909a05bc"
+        },
+        "categories": {
+            "auth": {
+                "comedyloverauth": {
+                    "hostedUIProviderCreds": "[{\"ProviderName\":\"Facebook\",\"client_id\":\"2221447054819000\",\"client_secret\":\"8487ea8861aa5a08789b06dea1fefd4c\"},{\"ProviderName\":\"Google\",\"client_id\":\"327788132717-escg76mos58f2knik4sqe8eb2t1ot2lv.apps.googleusercontent.com\",\"client_secret\":\"euvhHi5u2obJIzn8b3VivH0U\"}]",
+                    "facebookAppId": "2221447054819000",
+                    "googleClientId": "327788132717-escg76mos58f2knik4sqe8eb2t1ot2lv.apps.googleusercontent.com"
+                }
+            }
+        }
+    }
+}

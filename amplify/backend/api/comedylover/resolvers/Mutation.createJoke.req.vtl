@@ -1,0 +1,26 @@
+## [Start] Prepare DynamoDB PutItem Request. **
+$util.qr($context.args.input.put("createdAt", $util.defaultIfNull($ctx.args.input.createdAt, $util.time.nowISO8601())))
+$util.qr($context.args.input.put("updatedAt", $util.defaultIfNull($ctx.args.input.updatedAt, $util.time.nowISO8601())))
+$util.qr($context.args.input.put("__typename", "Joke"))
+$util.qr($context.args.input.put("queryName", "Joke"))
+#set( $vars = $ctx.args.input )
+#set($s1 = $ctx.args.input.comedian.toLowerCase())
+#set($s2 = $ctx.args.input.jokeSetup.toLowerCase())
+#set($s3 = $ctx.args.input.jokePunchline.toLowerCase())
+$util.qr($vars.put("searchField","$s1 $s2 $s3"))
+
+{
+  "version": "2017-02-28",
+  "operation": "PutItem",
+  "key": #if( $modelObjectKey ) $util.toJson($modelObjectKey) #else {
+  "id":   $util.dynamodb.toDynamoDBJson($util.defaultIfNullOrBlank($ctx.args.input.id, $util.autoId()))
+} #end,
+  "attributeValues": $util.dynamodb.toMapValuesJson($context.args.input),
+  "condition": {
+      "expression": "attribute_not_exists(#id)",
+      "expressionNames": {
+          "#id": "id"
+    }
+  }
+}
+## [End] Prepare DynamoDB PutItem Request. **

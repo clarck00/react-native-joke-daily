@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "comedylover",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcomedyloverauth",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+export const SWITCH_USER = 'SWITCH_USER';
+
+export const UPDATE_PROFILE = 'UPDATE_PROFILE';
+export const DELETE_PROFILE = 'DELETE_PROFILE';
+
+export const CHANGE_INDEX = 'CHANGE_INDEX'
+
+export const INCREMENT_INDEX = 'INCREMENT INDEX'
+export const DECREMENT_INDEX = 'DECREMENT INDEX'
+export const ZERO_INDEX = 'ZERO_INDEX'
+export const NEED_REFRESH = 'NEED_REFRESH'
+export const DONE_REFRESH = 'DONE_REFRESH'
+
+export const APP_ACTIVE = 'APP_ACTIVE'
+export const APP_INACTIVE = 'APP_INACTIVE'
+
